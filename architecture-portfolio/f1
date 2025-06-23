@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Althaf Ahmed | Architecture Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="hero" data-aos="fade-in">
+    <div class="container">
+      <h1>Althaf Ahmed</h1>
+      <p>Architect | Designer | Dream Builder</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="about section" data-aos="fade-up">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I am an architect with a deep passion for creating minimal, sustainable, and emotionally resonant spaces. My approach blends modern aesthetics with practical functionality to create timeless environments.</p>
+      </div>
+    </section>
+
+    <section class="skills section" data-aos="fade-up">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>Sustainable Design</li>
+          <li>3D Visualization</li>
+          <li>AutoCAD / Revit / SketchUp</li>
+          <li>Project Planning</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="projects section">
+      <div class="container">
+        <h2 data-aos="fade-right">Selected Projects</h2>
+        <div class="projects-grid">
+          <div class="project" data-aos="zoom-in">
+            <img src="images/project1.jpg" alt="Modern Villa in Kerala" />
+            <p>Modern Villa in Kerala</p>
+          </div>
+          <div class="project" data-aos="zoom-in" data-aos-delay="100">
+            <img src="images/project2.jpg" alt="Urban Apartment Design" />
+            <p>Urban Apartment Design</p>
+          </div>
+          <div class="project" data-aos="zoom-in" data-aos-delay="200">
+            <img src="images/project3.jpg" alt="Minimalist Interior Concept" />
+            <p>Minimalist Interior Concept</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" data-aos="fade-up">
+      <div class="container">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:althaf@example.com">althaf@example.com</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/althaf_architect" target="_blank">@althaf_architect</a></p>
+        <p>Let's collaborate on your next project. Feel free to reach out!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" data-aos="fade-up">
+    <div class="container">
+      <p>&copy; 2025 Althaf Ahmed. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+      easing: 'ease-in-out',
+      offset: 100,
+      delay: 100,
+      mirror: false,
+      anchorPlacement: 'top-bottom'
+    });
+  </script>
+</body>
+</html>
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('images/hero-bg.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project {
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.project img {
+  width: 100%;
+  display: block;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.project:hover img {
+  transform: scale(1.05);
+}
+
+.project p {
+  padding: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.contact p, .footer p {
+  text-align: center;
+}
+
+.footer {
+  background: #222;
+  color: #aaa;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+}
